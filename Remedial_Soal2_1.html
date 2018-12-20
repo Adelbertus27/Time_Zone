@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <center>
+                <h1><b>Jam Dunia</b></h1>
+                <h2 id="waktu"></h2>
+                
+                <b>
+                    <table>
+                    <tbody id="tbody"></tbody>
+                    <!-- <tbody id="tbody1"></tbody> -->
+                </table>
+                <table>
+                        <tbody id="tbody1"></tbody>
+                </table>
+                <h2 id="waktu2"></h2>
+                </b>
+                <script>
+                
+                setInterval(
+                    ()=>{
+                    var x = new Date()
+                    var jam = x.getHours()
+                    var menit = x.getMinutes()
+                    var detik = x.getSeconds()
+                    var noljam = ''
+                    var nolmenit = ''
+                    var noldetik = ''    
+                    if(jam<10){noljam='0'}
+                    if(menit<10){nolmenit='0'}
+                    if(detik<10){noldetik='0'}
+                    var time =
+                    '<tr><td>' + noljam + (jam-7) + ' : ' + nolmenit + (menit-7) + ' : ' + noldetik + (detik-7) + '* GMT+0 London, Inggris' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + (jam-6) + ' : ' + nolmenit + (menit-6) + ' : ' + noldetik + (detik-6) + '* GMT+1 Paris, France' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + (jam-5) + ' : ' + nolmenit + (menit-5) + ' : ' + noldetik + (detik-5) + '* GMT+2 Istanbul, Turki' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + (jam-4) + ' : ' + nolmenit + (menit-4) + ' : ' + noldetik + (detik-4) + '* GMT+3 Moskow, Russia' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + (jam-3) + ' : ' + nolmenit + (menit-3) + ' : ' + noldetik + (detik-3) + '* GMT+4 Abu Dhabi, UEA' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + (jam-2) + ' : ' + nolmenit + (menit-2) + ' : ' + noldetik + (detik-2) + '* GMT+5 Islamabad, Pakistan' + '</td></tr>' 
+                    +  
+                    '<tr><td>' + noljam + (jam-1) + ' : ' + nolmenit + (menit-1) + ' : ' + noldetik + (detik-1) + '* GMT+6 Astana, Kazakhstan' + '</td></tr>' 
+                    +
+                    '<tr><td>' + noljam + jam + ' : ' + nolmenit + menit + ' : ' + noldetik + detik + '* GMT+7 Jakarta, Indonesia' + '</td></tr>' 
+                    +
+                    
+                    '<tr><td>' + noljam + (jam+1) + ' : ' + nolmenit + (menit+1) + ' : ' + noldetik + (detik+1) + '* GMT+8 Shanghai, China' + '</td></tr>' 
+                    
+                    // var time1 = 
+                    // '<tr><td>' + noljam + (jam+2) + ' : ' + nolmenit + (menit+2) + ' : ' + noldetik + (detik2) + '* GMT+9 Tokyo, Japan' + '</td></tr>' 
+                    
+                    document.getElementById("tbody").innerHTML = time
+                    document.getElementById("waktu2").innerHTML = "Beda waktu : 1 jam, 1 menit, 1 detik"    
+                }, 1000) 
+                </script>
+            </center>
+</body>
+</html>
